@@ -11,5 +11,5 @@ git branch - просмотр веток репозитория.
 git branch new_branch_name - создание новой ветки.
 git checkout branch_name - переход из одной ветки в другую.
 git branch -D branch_name - удаление ветки.
-git log - graph - просмотр созданных коммитов в ветвлении.
+git log --graph - просмотр созданных коммитов в ветвлении.
 git merge branch_name - вливание из одной ветки в другую.
