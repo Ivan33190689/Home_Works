@@ -12,7 +12,20 @@
 // double numberB = 5;
 // Console.WriteLine(numberA / numberB);
 
-int numberA = new Random().Next(1, 10);
-int numberB = new Random().Next(1, 10);
-int result = numberA + numberB;
-Console.WriteLine($"{numberA} + {numberB} = {result}");
+// int numberA = new Random().Next(1, 10);
+// int numberB = new Random().Next(1, 10);
+// int result = numberA + numberB;
+// Console.WriteLine($"{numberA} + {numberB} = {result}");
+
+// Console.WriteLine("Введите имя пользователя: ");
+// string username = Console.ReadLine();
+
+// if (username == "Вера")
+// {
+//     Console.WriteLine("Ура, это же ВЕРА!");
+// }
+// else
+// {
+//     Console.WriteLine($"Привет, {username}");
+// }
+
