@@ -49,22 +49,40 @@
 // Нахождение чётного числа.
 
 
-bool FindEvenNumber(int number)
-{
-    if (number % 2 == 0)
-    {
-        Console.WriteLine($"Чётное число [{number}]");
-        return true;
-    }
-    else
-    {
-        Console.WriteLine($"Нечётное число [{number}]");
-        return false;
-    }
-}
+// bool FindEvenNumber(int number)
+// {
+//     if (number % 2 == 0)
+//     {
+//         Console.WriteLine($"Чётное число [{number}]");
+//         return true;
+//     }
+//     else
+//     {
+//         Console.WriteLine($"Нечётное число [{number}]");
+//         return false;
+//     }
+// }
 
 
-Console.WriteLine("Введите число: ");
+// Console.WriteLine("Введите число: ");
+// int number = int.Parse(Console.ReadLine()!);
+
+// Console.WriteLine(FindEvenNumber(number));
+
+
+void CheckIfEven(int number)
+    {
+        if ((number % 2) == 0)
+        {
+            Console.WriteLine($"Число `{number}` чётное");
+        }
+        else
+        {
+            Console.WriteLine($"Число `{number}` нечётное");
+        }
+    }
+
+Console.WriteLine("Введите чисдо: ");
 int number = int.Parse(Console.ReadLine()!);
-
-Console.WriteLine(FindEvenNumber(number));
+CheckIfEven(number);
+Console.WriteLine();
