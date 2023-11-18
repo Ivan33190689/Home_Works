@@ -70,19 +70,34 @@
 // Console.WriteLine(FindEvenNumber(number));
 
 
-void CheckIfEven(int number)
-    {
-        if ((number % 2) == 0)
-        {
-            Console.WriteLine($"Число `{number}` чётное");
-        }
-        else
-        {
-            Console.WriteLine($"Число `{number}` нечётное");
-        }
-    }
+// void CheckIfEven(int number)
+//     {
+//         if ((number % 2) == 0)
+//         {
+//             Console.WriteLine($"Число `{number}` чётное");
+//         }
+//         else
+//         {
+//             Console.WriteLine($"Число `{number}` нечётное");
+//         }
+//     }
+
+// Console.WriteLine("Введите чисдо: ");
+// int number = int.Parse(Console.ReadLine()!);
+// CheckIfEven(number);
+// Console.WriteLine();
+
+
+// Вывести чётные числа
+
+
+void PrintEvenNumbers(int number)
+{
+    for (int i = 2; i <= number; i+=2)
+    Console.Write(i + " ");
+}
 
 Console.WriteLine("Введите чисдо: ");
 int number = int.Parse(Console.ReadLine()!);
-CheckIfEven(number);
+PrintEvenNumbers(number);
 Console.WriteLine();
