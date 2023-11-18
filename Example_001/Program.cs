@@ -27,22 +27,44 @@
 
 // Нахождение максимального из трёх.
 
-int FindMax(int a, int b, int c)
+// int FindMax(int a, int b, int c)
+// {
+//     int max = a;
+//     if (b > max) max = b;
+//     if (c > max) max = c;
+//     return max;
+// }
+
+// Console.WriteLine("Введите первое число: ");
+// int a = int.Parse(Console.ReadLine()!);
+// Console.WriteLine("Введите второе число: ");
+// int b = int.Parse(Console.ReadLine()!);
+// Console.WriteLine("Введите третье число: ");
+// int c = int.Parse(Console.ReadLine()!);
+
+// int result = FindMax(a, b, c);
+// Console.WriteLine($"Максимальное из трёх чисел = [ {result} ]");
+
+
+// Нахождение чётного числа.
+
+
+bool FindEvenNumber(int number)
 {
-    int max = a;
-    if (b > max) max = b;
-    if (c > max) max = c;
-    return max;
+    if (number % 2 == 0)
+    {
+        Console.WriteLine($"Чётное число [{number}]");
+        return true;
+    }
+    else
+    {
+        Console.WriteLine($"Нечётное число [{number}]");
+        return false;
+    }
 }
 
-Console.WriteLine("Введите первое число: ");
-int a = int.Parse(Console.ReadLine()!);
-Console.WriteLine("Введите второе число: ");
-int b = int.Parse(Console.ReadLine()!);
-Console.WriteLine("Введите третье число: ");
-int c = int.Parse(Console.ReadLine()!);
 
-int result = FindMax(a, b, c);
-Console.WriteLine($"Максимальное из трёх чисел = [ {result} ]");
+Console.WriteLine("Введите число: ");
+int number = int.Parse(Console.ReadLine()!);
 
-
+Console.WriteLine(FindEvenNumber(number));
