@@ -25,34 +25,62 @@
 // номер координатной четверти плоскости, в которой 
 // находится эта точка.
 
-void FindQuarter(int x, int y)
+// void FindQuarter(int x, int y)
+// {
+//     if (x > 0 && y > 0)
+//     {
+//         System.Console.WriteLine("Первая четверть");
+//     }
+//     else if (x < 0 && y > 0)
+//     {
+//         System.Console.WriteLine("Вторая четверть");
+//     }
+//     else if(x < 0 && y < 0)
+//     {
+//         System.Console.WriteLine("Третья четверть");
+//     }
+//     else if(x > 0 && y < 0)
+//     {
+//         System.Console.WriteLine("Четвёртая четверть");
+//     }
+//     else
+//     {
+//         System.Console.WriteLine("Такой четверти не существует");
+//     }
+// }
+
+// System.Console.WriteLine("Введите точку x: ");
+// int x = int.Parse(Console.ReadLine()!);
+// System.Console.WriteLine("Введите точку y: ");
+// int y = int.Parse(Console.ReadLine()!);
+
+// FindQuarter(x, y);
+// System.Console.WriteLine();
+
+
+// Задача 3: Напишите программу, которая принимает на вход целое число 
+// из отрезка [10, 99] и показывает наибольшую цифру числа.
+
+void PrintMaxDigit(int number)
 {
-    if (x > 0 && y > 0)
-    {
-        System.Console.WriteLine("Первая четверть");
-    }
-    else if (x < 0 && y > 0)
-    {
-        System.Console.WriteLine("Вторая четверть");
-    }
-    else if(x < 0 && y < 0)
-    {
-        System.Console.WriteLine("Третья четверть");
-    }
-    else if(x > 0 && y < 0)
-    {
-        System.Console.WriteLine("Четвёртая четверть");
-    }
-    else
-    {
-        System.Console.WriteLine("Такой четверти не существует");
-    }
+  int digits = number % 10;
+  int units = number / 10;
+  int max = 0;
+  if (digits > units) 
+  {
+    max = digits;
+    System.Console.WriteLine($"Максимальная цифра: {max}");
+  }
+  if (units > digits)
+  {
+    max = units;
+    System.Console.WriteLine($"Максимальная цифра: {max}");
+  }
+  if (digits == units)
+    System.Console.WriteLine("Эти цифры равны: ");
 }
 
-System.Console.WriteLine("Введите точку x: ");
-int x = int.Parse(Console.ReadLine()!);
-System.Console.WriteLine("Введите точку y: ");
-int y = int.Parse(Console.ReadLine()!);
+System.Console.WriteLine("Введите число в отрезке [10, 99]: ");
+int number = int.Parse(Console.ReadLine()!);
 
-FindQuarter(x, y);
-System.Console.WriteLine();
+PrintMaxDigit(number);
