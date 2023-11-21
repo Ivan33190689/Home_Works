@@ -1,10 +1,10 @@
-﻿int MaxNumber(int arg1, int arg2, int arg3)
-{
-    int result = arg1;
-    if (arg2 > result) result = arg2;
-    if (arg3 > result) result = arg3;
-    return result;
-}
+﻿// int MaxNumber(int arg1, int arg2, int arg3)
+// {
+//     int result = arg1;
+//     if (arg2 > result) result = arg2;
+//     if (arg3 > result) result = arg3;
+//     return result;
+// }
 
 // int a1 = 4;
 // int b1 = 5;
@@ -23,8 +23,25 @@
 
 // System.Console.WriteLine(max);
 
-int[] array = {35, 28, 71, 28, 48, 72, 85, 58, 47};
+// int[] array = {35, 28, 71, 28, 48, 72, 85, 58, 47};
 
-int max = MaxNumber(MaxNumber(array[0], array[1], array[2]), MaxNumber(array[3], array[4], array[5]), MaxNumber(array[6], array[7], array[8]));
+// int max = MaxNumber(MaxNumber(array[0], array[1], array[2]), MaxNumber(array[3], array[4], array[5]), MaxNumber(array[6], array[7], array[8]));
 
-System.Console.WriteLine(max);
+// System.Console.WriteLine(max);
+
+
+int[] array = {54, 17, 25, 74, 4, 15, 3, 75};
+
+int n = array.Length;
+int find = 15;
+int index = 0;
+
+while (index < n)
+{
+    if (array[index] == find)
+    {
+        System.Console.WriteLine(index);
+        break; 
+    }
+    index++;
+}
