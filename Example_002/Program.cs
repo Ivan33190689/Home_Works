@@ -61,26 +61,61 @@
 // Задача 3: Напишите программу, которая принимает на вход целое число 
 // из отрезка [10, 99] и показывает наибольшую цифру числа.
 
-void PrintMaxDigit(int number)
+// void PrintMaxDigit(int number)
+// {
+//   int digits = number % 10;
+//   int units = number / 10;
+//   int max = 0;
+//   if (digits > units) 
+//   {
+//     max = digits;
+//     System.Console.WriteLine($"Максимальная цифра: {max}");
+//   }
+//   if (units > digits)
+//   {
+//     max = units;
+//     System.Console.WriteLine($"Максимальная цифра: {max}");
+//   }
+//   if (digits == units)
+//     System.Console.WriteLine("Эти цифры равны: ");
+// }
+
+// System.Console.WriteLine("Введите число в отрезке [10, 99]: ");
+// int number = int.Parse(Console.ReadLine()!);
+
+// PrintMaxDigit(number);
+
+
+// Задача 4: Напишите программу, которая на вход принимает 
+// натуральное число N, а на выходе показывает его цифры 
+// через запятую.
+
+
+using System.Globalization;
+
+int[] PrintDigitsOfNumber(int N)
 {
-  int digits = number % 10;
-  int units = number / 10;
-  int max = 0;
-  if (digits > units) 
-  {
-    max = digits;
-    System.Console.WriteLine($"Максимальная цифра: {max}");
-  }
-  if (units > digits)
-  {
-    max = units;
-    System.Console.WriteLine($"Максимальная цифра: {max}");
-  }
-  if (digits == units)
-    System.Console.WriteLine("Эти цифры равны: ");
+    List<int> digitsList = new List<int> ();
+    while (N > 0)
+    {
+        int digit = N % 10;
+        digitsList.Add(digit);
+        N /= 10;
+    }
+    digitsList.Reverse();
+
+    int[] digitsArray = digitsList.ToArray();
+
+    return digitsArray;
 }
 
-System.Console.WriteLine("Введите число в отрезке [10, 99]: ");
-int number = int.Parse(Console.ReadLine()!);
+System.Console.WriteLine("Введите число: ");
+int N = int.Parse(Console.ReadLine()!);
 
-PrintMaxDigit(number);
+int[] digitsArray = PrintDigitsOfNumber(N);
+
+for (int i = 0; i < digitsArray.Length; i++)
+{
+
+    System.Console.Write(digitsArray[i] + ", ");
+}
