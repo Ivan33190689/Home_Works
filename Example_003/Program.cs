@@ -85,13 +85,38 @@
 // максимальным и минимальным элементов массива.
 
 
-void DifferenceMinMax()
+double[] CreateArray(int size)
 {
-    double[] newArray = {2.5, 3.7, 5.9, 4.2, 1.3, 2.1};
+    double[] newArray = new double[size];
+    Random rand = new Random();
+
+    for (int i = 0; i < size; i++)
+
+        newArray[i] = Math.Round(rand.Next(1, 10) + rand.NextDouble(), 2);
+
+return newArray;
+}
+
+void PrintArray(double[] newArray)
+{
+    for (int i = 0; i < newArray.Length; i++)
+
+    System.Console.Write(newArray[i] + " ");
+    System.Console.WriteLine();
+}
+
+System.Console.WriteLine("Введите количество элементов массива: ");
+int size = Convert.ToInt32(Console.ReadLine());
+
+double[] newArray = CreateArray(size);
+PrintArray(newArray);
+
+void DifferenceMinMax(double[] newArray)
+{
     double min = newArray[0];
     double max = newArray[0];
     double difference = 0;
-    int i = 1; 
+    int i = 1;
 
     while (i < newArray.Length)
     {
@@ -102,8 +127,8 @@ void DifferenceMinMax()
         i++;
     }
     difference = max - min;
-    System.Console.Write($"Разница между максимальным и минимальным элементов массива: {difference:F1}");
+    System.Console.Write($"Разница между максимальным и минимальным элементов массива: {difference:F2}");
 
 }
 
-DifferenceMinMax();
+DifferenceMinMax(newArray);
