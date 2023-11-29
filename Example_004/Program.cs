@@ -43,16 +43,67 @@
 // Задача 2: Задайте массив заполненный случайными трёхзначными числами.
 // Напишите программу, которая покажет количество чётных чисел в массиве.
 
+// int[] CreateArray()
+// {
+//     System.Console.WriteLine("Введите количество элементов массива: ");
+//     int size = int.Parse(Console.ReadLine()!);
+
+//     int[] array = new int[size];
+//     Random rand = new Random();
+
+//     for (int i = 0; i < size; i++)
+//         array[i] = rand.Next(100, 1000);
+
+//     return array;
+// }
+
+// void PrintArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//         System.Console.Write(array[i] + " ");
+//         System.Console.WriteLine();
+// }
+
+
+// int[] array = CreateArray();
+// PrintArray(array);
+
+// int DifferenceEvenNumbers(int[] array)
+// {
+//     int count = 0;
+
+//     for (int i = 0; i < array.Length; i++)
+
+//     if (array[i] % 2 == 0)
+//         count++;
+
+//     return count;
+// }
+
+// int count = DifferenceEvenNumbers(array);
+// System.Console.WriteLine($"Количество трёхзначных чётных чисел в массиве - {count}");
+
+
+// Задача 3: Напишите программу, которая перевернёт одномерный массив 
+// (первый элемент станет последним, второй – предпоследним и т.д.)
+
+using System.ComponentModel.Design;
+using System.Linq.Expressions;
+
 int[] CreateArray()
 {
     System.Console.WriteLine("Введите количество элементов массива: ");
     int size = int.Parse(Console.ReadLine()!);
+    System.Console.WriteLine("Введите минимальный элемент массива: ");
+    int min = int.Parse(Console.ReadLine()!);
+    System.Console.WriteLine("Введите максимальный элемент массива: ");
+    int max = int.Parse(Console.ReadLine()!);
 
     int[] array = new int[size];
     Random rand = new Random();
 
     for (int i = 0; i < size; i++)
-        array[i] = rand.Next(100, 1000);
+        array[i] = rand.Next(min, max);
 
     return array;
 }
@@ -64,21 +115,24 @@ void PrintArray(int[] array)
         System.Console.WriteLine();
 }
 
-
 int[] array = CreateArray();
 PrintArray(array);
 
-int DifferenceEvenNumbers(int[] array)
+
+
+void ReverseArray(int[] array)
 {
-    int count = 0;
-
-    for (int i = 0; i < array.Length; i++)
-
-    if (array[i] % 2 == 0)
-        count++;
-
-    return count;
+    for (int i = 0, j = array.Length - 1; i < j; i++, j--)
+    {
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
 }
 
-int count = DifferenceEvenNumbers(array);
-System.Console.WriteLine($"Количество трёхзначных чётных чисел в массиве - {count}");
+
+int[] newarray = array;
+ReverseArray(newarray);
+
+for (int i = 0; i < newarray.Length; i++)
+    System.Console.Write(newarray[i] + " ");
