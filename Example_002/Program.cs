@@ -91,31 +91,58 @@
 // через запятую.
 
 
-using System.Globalization;
+// int[] PrintDigitsOfNumber(int N)
+// {
+//     List<int> digitsList = new List<int> ();
+//     while (N > 0)
+//     {
+//         int digit = N % 10;
+//         digitsList.Add(digit);
+//         N /= 10;
+//     }
+//     digitsList.Reverse();
 
-int[] PrintDigitsOfNumber(int N)
+//     int[] digitsArray = digitsList.ToArray();
+
+//     return digitsArray;
+// }
+
+// System.Console.WriteLine("Введите число: ");
+// int N = int.Parse(Console.ReadLine()!);
+
+// int[] digitsArray = PrintDigitsOfNumber(N);
+
+// for (int i = 0; i < digitsArray.Length; i++)
+// {
+
+//     System.Console.Write(digitsArray[i] + ", ");
+// }
+
+
+// //  Вариант 2.
+
+using System.Runtime.CompilerServices;
+
+void PrintDigitsOfNumber()
 {
-    List<int> digitsList = new List<int> ();
+    System.Console.WriteLine("Введите число: ");
+    int N = int.Parse(Console.ReadLine()!);
+
+    int digits = 0;
     while (N > 0)
     {
-        int digit = N % 10;
-        digitsList.Add(digit);
+        digits = N % 10;
         N /= 10;
+
+        if (N > 0)
+        {
+            System.Console.Write(digits + ", ");
+        }
+        else
+        {
+            System.Console.WriteLine(digits);
+        }
     }
-    digitsList.Reverse();
-
-    int[] digitsArray = digitsList.ToArray();
-
-    return digitsArray;
 }
 
-System.Console.WriteLine("Введите число: ");
-int N = int.Parse(Console.ReadLine()!);
-
-int[] digitsArray = PrintDigitsOfNumber(N);
-
-for (int i = 0; i < digitsArray.Length; i++)
-{
-
-    System.Console.Write(digitsArray[i] + ", ");
-}
+PrintDigitsOfNumber();
