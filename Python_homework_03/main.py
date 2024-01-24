@@ -7,14 +7,19 @@
 # k = 3
 # 1
 
-# list_1 = [1, 2, 3, 4, 5]
-# k = 3
-
+# n = int(input('Введите количество элементов массиве: '))
 # count = 0
 
+# list_1 = []
+
+# for i in range(n):
+#     num = int(input('Введите элемент массива: '))
+#     list_1.append(num)
+# k = int(input('Введите число: '))
+
 # for i in list_1:
-#     if k == i:
-#         count += 1
+#     if i == k:
+#           count += 1
 # print(count)
 
 # Требуется найти в массиве list_1 самый близкий по 
@@ -29,16 +34,23 @@
 # k = 6
 # 5
 
-list_1 = [1, 2, 3, 4, 5, 7, 9]
-k = 8
+n = int(input('Введите количество элементов массива: '))
+list_1 = []
 
-min_diff = abs(list_1[0]) 
+for i in range(n):
+    num = int(input('Введите элемент массива: '))
+    list_1.append(num)
+k = int(input('Введите число: '))
+
+nearest_number = list_1[0]
+min_diff = abs(k - list_1[0])
 
 for i in list_1:
     diff = abs(i - k)
     if diff < min_diff:
         min_diff = diff
-print(i)
+        nearest_number = i
+print(nearest_number)
 
 # В настольной игре Скрабл (Scrabble) каждая буква имеет 
 # определенную ценность.
