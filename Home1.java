@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Home1 {
     public static void main(String[] args) {
         // Вычислить n-ое треугольного число(сумма чисел от 1 до n),
