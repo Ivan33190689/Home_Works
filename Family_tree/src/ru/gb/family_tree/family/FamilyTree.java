@@ -1,4 +1,6 @@
-package ru.gb.family_tree;
+package ru.gb.family_tree.family;
+
+import ru.gb.family_tree.human.Human;
 
 import java.util.ArrayList;
 import java.util.List;

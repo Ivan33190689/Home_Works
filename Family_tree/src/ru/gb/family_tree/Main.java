@@ -1,6 +1,9 @@
 package ru.gb.family_tree;
 
-import java.security.Permission;
+import ru.gb.family_tree.family.FamilyTree;
+import ru.gb.family_tree.human.Gender;
+import ru.gb.family_tree.human.Human;
+
 import java.time.LocalDate;
 
 public class Main {
