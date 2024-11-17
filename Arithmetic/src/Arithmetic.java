@@ -26,6 +26,6 @@ public class Arithmetic {
         if (number1 < number2) {
             return number1;
         }
-        return number2;
+       return number2;
     }
 }
